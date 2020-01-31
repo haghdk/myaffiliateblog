@@ -20,3 +20,17 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Main image', name: 'mainimage', widget: 'image' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'homepage'
+    label: 'Homepage'
+    folder: 'assets/content/homepage'
+    create: true
+    format: 'json'
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Main image', name: 'mainimage', widget: 'image' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
