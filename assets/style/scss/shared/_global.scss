@@ -1,0 +1,71 @@
+html {
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0 auto;
+  font-size: 16px;
+  font-family: $font-family-main;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: $line-height-body;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+
+  @media (max-width: $grid-xxs-breakpoint - 1) {
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: $grid-md-breakpoint - 1) and (orientation: landscape) and (max-height: 900px) {
+    line-height: 1.15;
+    font-size: 16px;
+  }
+
+  &.disable-body-scroll {
+    overflow: hidden !important;
+  }
+}
+
+.container {
+  height: 100%;
+  margin: 0 auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  max-width: 1600px;
+
+  @media (min-width: $grid-sm-breakpoint) {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  @media (min-width: $grid-lg-breakpoint) {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}

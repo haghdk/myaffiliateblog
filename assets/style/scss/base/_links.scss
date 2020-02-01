@@ -1,0 +1,8 @@
+a {
+    color: $color-dark;
+    text-decoration: none;
+
+    &.underline {
+        text-decoration: underline;
+    }
+}

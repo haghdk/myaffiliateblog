@@ -1,0 +1,19 @@
+img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  display: block;
+
+  &.account-image {
+    border-radius: 1rem;
+  }
+}
+
+.content-image {
+  @media (min-width: $grid-md-breakpoint) {
+    img {
+      width: auto;
+      max-width: 85%;
+    }
+  }
+}

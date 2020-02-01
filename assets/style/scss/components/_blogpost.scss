@@ -1,0 +1,12 @@
+.blog-post-card {
+  background-color: $color-grey-lighter;
+  box-shadow: 2px 2px 0 rgba(200, 200, 200, 0.25);
+
+  &--inner {
+    padding: 2.5rem;
+  }
+
+  &--teaser {
+    display: block;
+  }
+}

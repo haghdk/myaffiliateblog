@@ -1,0 +1,32 @@
+//Utilities
+@import 'scss/utilities/variables';
+@import 'scss/utilities/mixins';
+
+//Globals
+@import 'scss/shared/global';
+@import 'scss/shared/content';
+
+//Base
+@import 'scss/base/animations';
+@import 'scss/base/fonts';
+@import 'scss/base/colors';
+@import 'scss/base/links';
+@import 'scss/base/headers';
+@import 'scss/base/lists';
+@import 'scss/base/images';
+@import 'scss/base/typography';
+
+//Helpers
+@import 'scss/helpers/helpers';
+
+//Helpers
+@import 'scss/layout/header';
+@import 'scss/layout/main';
+@import 'scss/layout/footer';
+
+//Components
+@import 'scss/components/buttons';
+@import 'scss/components/navigation';
+@import 'scss/components/sections';
+@import 'scss/components/forms';
+@import 'scss/components/blogpost';

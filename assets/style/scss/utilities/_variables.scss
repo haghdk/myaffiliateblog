@@ -1,0 +1,58 @@
+//Paths
+$gfxpath: '/images/';
+
+//Colors
+$color-white: #ffffff;
+$color-light: #ffffff;
+$color-grey: #fbfbfb;
+$color-grey-dark: #e7e7e7;
+$color-grey-light: #f2f2f2;
+$color-grey-lighter: #fbfbfb;
+$color-dark: #000;
+$color-blue: #2c79f8;
+$color-darkblue: #162f42;
+$color-yellow: #f9e184;
+$color-red: #b51515;
+
+//Fonts
+$font-family-main: 'Playfair Display', serif;
+
+//Font weight
+$font-weight-normal: normal;
+$font-weight-bold: bold;
+$font-weight-bolder: 900;
+
+//Font sizes
+$font-size-std-header: 40px;
+$font-size-std-header-sm: 30px;
+
+$font-size-manchet: 25px;
+$font-size-body: 18px;
+$font-size-body-xxxs: 14px;
+
+//Lineheights
+$line-height-body: 1.5;
+$line-height-body-narrow: 1.25;
+$line-height-list: 1.2;
+$line-height-large: 1.5;
+
+//Border style
+$border-content-box-style: solid;
+
+//Border width
+$border-content-box-width: 1px;
+
+//Border colors
+
+//Buttons
+$button-height: 80px;
+
+//Grid
+$grid-xxxs-breakpoint: 320px;
+$grid-xxs-breakpoint: 375px;
+$grid-xs-breakpoint: 520px;
+$grid-sm-breakpoint: 768px;
+$grid-md-breakpoint: 992px;
+$grid-lg-breakpoint: 1200px;
+$grid-xl-breakpoint: 1500px;
+$grid-xxl-breakpoint: 1600px;

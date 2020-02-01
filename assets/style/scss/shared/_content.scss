@@ -1,0 +1,69 @@
+.content-box {
+
+    &.flow-card {
+
+        margin: 1.25rem 0;
+
+        @media (min-width: $grid-sm-breakpoint) {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            z-index: 2;
+            background-color: $color-white;
+            border-radius: 1.25rem;
+            padding: 2rem;
+            box-shadow: 0 0 1rem rgba(0, 0, 0, 0.35);
+            margin: 2.5rem 0 2.5rem -5rem;
+        }
+
+        @media (min-width: $grid-md-breakpoint) {
+            margin: 5rem 0 5rem -7.5rem;
+            padding: 2.5rem;
+        }
+
+        .button {
+            margin-bottom: 0;
+
+            @media (min-width: $grid-sm-breakpoint) {
+                height: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.content {
+
+    &.padded-right-md {
+
+        @media (min-width: $grid-sm-breakpoint) {
+            padding-right: 2.5rem;
+        }
+
+        @media (min-width: $grid-md-breakpoint) {
+            padding-right: 5rem;
+        }
+
+        @media (min-width: $grid-xl-breakpoint) {
+            padding-right: 10rem;
+        }
+    }
+
+    &.padded-left-md {
+
+        @media (min-width: $grid-sm-breakpoint) {
+            padding-left: 2.5rem;
+        }
+
+        @media (min-width: $grid-md-breakpoint) {
+            padding-left: 5rem;
+        }
+
+        @media (min-width: $grid-xl-breakpoint) {
+            padding-left: 10rem;
+        }
+    }
+}

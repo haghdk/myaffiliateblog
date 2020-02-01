@@ -1,0 +1,165 @@
+.custom-select-container {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.custom-select-container * {
+    box-sizing: border-box;
+}
+
+.custom-select-container.is-disabled {
+    opacity: .333;
+}
+
+.custom-select-container.custom-select-container.is-open {
+
+    .custom-select-opener {
+
+        &::after {
+            transform: translateY(-50%) rotate(-180deg);
+        }
+    }
+}
+
+.custom-select-opener {
+    background-color: $color-white;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    border-radius: 2.5rem;
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    font-family: $font-family-bold;
+    font-size: 0.8rem;
+
+    &::after {
+        content: '';
+        display: block;
+        background-image: url(/static/dark-arrow.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 16px;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        right: 0.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: transform 0.2s ease-in-out;
+    }
+
+ 
+    @media (max-width: $grid-sm-breakpoint - 1) {
+        padding: 0.5rem 0.5rem 0.5rem 1rem;
+    }
+
+    @media (min-width: $grid-sm-breakpoint) {
+        padding: 0.75rem;
+    }
+
+    @media (min-width: $grid-md-breakpoint) {
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+
+    @media (min-width: $grid-lg-breakpoint) {
+        padding: 1.25rem;
+        font-size: 1rem;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.custom-select-container select {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.custom-select-panel {
+    max-height: 0;
+    transition: max-height .1s ease-out, overflow-y 0.1s 0.5s;
+    overflow: hidden;
+    background-color: $color-white;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+    width: 100%;
+    top: 1.5rem;
+    box-shadow: -5px 31px 24px -37px rgba(0, 0, 0, 0.35);
+
+    @media (min-width: $grid-sm-breakpoint) {
+        top: 1.75rem;
+    }
+    
+    @media (min-width: $grid-md-breakpoint) {
+        top: 2rem;
+    }
+
+    @media (min-width: $grid-lg-breakpoint) {
+        top: 2.5rem;
+        border-bottom-left-radius: 2.5rem;
+        border-bottom-right-radius: 2.5rem;
+    }
+}
+
+.custom-select-container.is-open .custom-select-panel {
+    max-height: 10.7em;
+    overflow-y: auto
+}
+
+.custom-select-option {
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+
+    @media (min-width: $grid-sm-breakpoint) {
+        padding: 0.5rem 0.75rem;
+    }
+
+    @media (min-width: $grid-md-breakpoint) {
+        padding: 0.5rem 1rem;
+    }
+        
+    @media (min-width: $grid-lg-breakpoint) {
+        padding: 1.25rem;
+        font-size: 1rem;
+    }
+
+    &:first-child {
+        padding-top: 2.5rem;
+        display: none;
+    }
+
+    &:nth-child(2) {
+        margin-top: 1.25rem;
+    }
+
+    // &:last-child {
+    //     padding-bottom: 2.5rem;
+    // }
+}
+
+.custom-select-option.has-focus {
+    background-color: $color-grey-light;
+}
+
+.custom-select-option.is-selected::before {
+    content: "✔";
+    padding-right: 0.5em;
+}
+
+.custom-select-optgroup>.custom-select-option {
+    padding-left: 2em;
+}
+
+.custom-select-optgroup::before {
+    content: attr(data-label);
+    display: block;
+    padding: 0.5em;
+    color: #888;
+}

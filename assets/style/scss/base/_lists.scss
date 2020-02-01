@@ -1,0 +1,71 @@
+ul {
+    margin: 0;
+    padding: 0 1rem;
+
+    &.list-unstyled {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &.list-inline {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+        li {
+            display: inline-flex;
+            align-items: center;
+        }
+    }
+
+    &.app-list {
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+        display: flex;
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+        @media (min-width: $grid-sm-breakpoint) {
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            margin-right: 1rem;
+
+            @media (max-width: $grid-sm-breakpoint - 1) {
+                margin-bottom: 1rem;
+            }
+
+            img {
+                height: 50px;
+                width: auto;
+            }
+        }
+    }
+}
+
+#bankListContainer {
+    max-height: 100px;
+    overflow-y: scroll;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    background-color: $color-white;
+    padding: 1.25rem 1.25rem;
+    border-radius: 1.25rem;
+    display: none;
+    margin-top: -2px;
+    border: 2px solid #D8BC53;
+
+    li {
+        margin-bottom: 0.5rem;
+        cursor: pointer;
+    }
+
+    .other-bank {
+        cursor: pointer;
+    }
+}

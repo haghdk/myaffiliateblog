@@ -1,0 +1,296 @@
+.flex {
+    width: 100%;
+    
+    @media (min-width: $grid-sm-breakpoint) {
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: -o-flex;
+        display: -webkit-box;
+        display: flex;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+
+        .flex-item {
+            position: relative;
+            -webkit-box-flex: 1;
+                -ms-flex: 1;
+                    flex: 1;
+            
+            &.half {
+                -webkit-box-flex: 50%;
+                -ms-flex: 50%;
+                flex: 50%;
+            }
+        }
+
+        &.flex-row-reverse {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: reverse;
+                -ms-flex-direction: row-reverse;
+                    flex-direction: row-reverse;
+        }
+
+        &.flex-column-reverse {
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+@for $i from 1 through 12 {
+    .flex-#{$i} {
+        -webkit-box-flex: #{$i};
+            -ms-flex: #{$i};
+                flex: #{$i};
+    }
+}
+
+.flex-column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.flex-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+}
+
+.justify-center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.justify-end {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.justify-around {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+.justify-between {
+    -ms-flex-pack: distribute;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+.align-center {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.align-top {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.align-bottom {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+.align-start-self {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+}
+
+
+
+.text-center {
+    text-align: center;
+}
+
+
+/*** WIDTHS ***/
+
+@media(min-width: $grid-sm-breakpoint) {
+
+    .half-width {
+        width: 50%;
+    }
+    
+    .three-quarter-width {
+        width: 75%;
+    }
+
+    .width-40 {
+        width: 40%;
+    }
+
+    .width-45 {
+        width: 45%;
+    }
+
+    .width-55 {
+        width: 55%;
+    }
+}
+
+
+/*** HIDDEN / VISIBLE ***/
+
+.hidden {
+    display: none !important;
+}
+
+.visible {
+    display: block !important;
+}
+
+.visible-xs,
+.visible-sm,
+.visible-md,
+.visible-lg,
+.visible-xl,
+.visible-xxl {
+    display: none;
+}
+
+@media (max-width: $grid-xs-breakpoint - 1) {
+    .visible-xxs {
+        display: block;
+    }
+}
+
+@media (min-width: $grid-xs-breakpoint) and (max-width: $grid-sm-breakpoint - 1) {
+    .visible-xs {
+        display: block;
+    }
+}
+
+@media (min-width: $grid-sm-breakpoint) and (max-width: $grid-md-breakpoint - 1) {
+    .visible-sm {
+        display: block;
+    }
+}
+
+@media (min-width: $grid-md-breakpoint) and (max-width: $grid-lg-breakpoint - 1) {
+    .visible-md {
+        display: block;
+    }
+}
+
+@media (min-width: $grid-lg-breakpoint) and (max-width: $grid-xl-breakpoint - 1) {
+    .visible-lg {
+        display: block;
+    }
+}
+
+@media (min-width: $grid-xl-breakpoint) and (max-width: $grid-xxl-breakpoint - 1) {
+    .visible-xl {
+        display: block;
+    }
+}
+
+@media (min-width: $grid-xxl-breakpoint) {
+    .visible-xxl {
+        display: block;
+    }
+}
+
+@media (max-width: $grid-sm-breakpoint) {
+    .padding-no-desktop {
+        padding: 0 25px;
+    }
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+.group {
+    zoom: 1;
+    /* For IE 6/7 (trigger hasLayout) */
+}
+
+.no-margin {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.arrow-bg {
+}
+
+.block {
+    display: block;
+}
+
+.margin-lr-auto {
+    margin: auto;
+}
+
+.left-margin {
+
+    @media(min-width: $grid-sm-breakpoint) {
+        margin-left: 2.5rem;
+    }
+
+    @media(min-width: $grid-md-breakpoint) {
+        margin-left: 5rem;
+    }
+
+}
+
+.right-margin {
+
+    @media(min-width: $grid-sm-breakpoint) {
+        margin-right: 2.5rem;
+    }
+
+    @media(min-width: $grid-md-breakpoint) {
+        margin-right: 5rem;
+    }
+
+    &-md {
+        @media(max-width: $grid-md-breakpoint - 1) {
+            margin-right: 0;
+        }
+    }
+
+}
+
+.hidden {
+    display: none;
+}
+
+.half-height {
+    height: 50vh;
+}
+
+.js-active {
+    display: block !important;
+}
+
+.js-hide {
+    display: none;
+}
