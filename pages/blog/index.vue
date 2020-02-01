@@ -9,6 +9,11 @@
           :key="index"
           class="blog-post-card"
         >
+          <img
+            src="/img/350x150.png"
+            v-if="blogPost.mainimage"
+            class="blog-post-card--image"
+          />
           <div class="blog-post-card--inner">
             <nuxt-link :to="`blog/${blogPost.slug}`">{{
               blogPost.title

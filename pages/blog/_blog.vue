@@ -1,11 +1,22 @@
 <template>
   <div class="container">
-    <article>
+    <article class="blogpost">
+      <img src="/img/350x150.png" class="blogpost--image" />
       <h1>{{ blogPost.title }}</h1>
+
+      <time :datetime="blogPost.date">{{ blogPost.date | moment('LL') }}</time>
+
       <div v-html="$md.render(blogPost.body)" />
     </article>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.blogpost--image {
+  margin-bottom: 1.25rem;
+}
+</style>
+
 <script>
 export default {
   async asyncData({ params, payload }) {
