@@ -19,6 +19,24 @@ export default {
         blogPost: await require(`~/assets/content/blog/${params.blog}.json`)
       }
     }
+  },
+
+  head() {
+    return {
+      title: this.blogPost.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.blogPost.description
+        },
+        {
+          hid: 'title',
+          name: 'title',
+          content: this.blogPost.title
+        }
+      ]
+    }
   }
 }
 </script>

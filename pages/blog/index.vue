@@ -3,23 +3,44 @@
     <div class="container">
       <h1>Blog</h1>
 
-      <article
-        v-for="(blogPost, index) in blogPosts"
-        :key="index"
-        class="blog-post-card"
-      >
-        <div class="blog-post-card--inner">
-          <nuxt-link :to="`blog/${blogPost.slug}`">{{
-            blogPost.title
-          }}</nuxt-link>
-          <span class="blog-post-card--teaser">{{ blogPost.description }}</span>
-        </div>
-      </article>
+      <div class="blog-post-wrapper flex">
+        <article
+          v-for="(blogPost, index) in blogPosts"
+          :key="index"
+          class="blog-post-card"
+        >
+          <div class="blog-post-card--inner">
+            <nuxt-link :to="`blog/${blogPost.slug}`">{{
+              blogPost.title
+            }}</nuxt-link>
+            <span class="blog-post-card--teaser">{{
+              blogPost.description
+            }}</span>
+
+            <nuxt-link :to="`blog/${blogPost.slug}`" class="text-bold">
+              Read more
+            </nuxt-link>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 </template>
 <script>
 export default {
+  head() {
+    return {
+      title: 'Blog',
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'My custom description'
+        }
+      ]
+    }
+  },
   computed: {
     blogPosts() {
       return this.$store.state.blogPosts
