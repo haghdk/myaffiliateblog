@@ -21,12 +21,7 @@ collections:
       - { label: 'Main image', name: 'mainimage', widget: 'image' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Meta Title', name: 'metatitle', widget: 'string' }
-      - {
-          label: 'Meta Description',
-          name: 'metadescription',
-          widget: 'string',
-          pattern: ['.{,160}', 'Must have max 160 characters'],
-        }
+      - { label: 'Meta Description', name: 'metadescription', widget: 'string' }
   - name: 'homepage'
     label: 'Homepage'
     folder: 'assets/content/homepage'
