@@ -3,5 +3,7 @@
   "date": "2019-08-07T06:00:00.000Z",
   "description": "Ipsa natus aliquid ",
   "mainimage": "/img/350x150.png",
-  "body": "## some Post\n\n### Some subheader\n\nLorem ipsum dolor websites amet.\n\n> A blockquote from a wise person."
+  "body": "## some Post\n\n### Some subheader\n\nLorem ipsum dolor websites amet",
+  "metatitle": "some Post",
+  "metadescription": "Lorem ipsum dolor websites amet"
 }
