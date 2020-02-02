@@ -1,12 +1,39 @@
 nav {
   border-bottom: 1px solid $color-grey-dark;
+  background-color: $color-white;
   margin: auto;
+  position: relative;
+
+  .mobile-menu-opener {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @media (min-width: $grid-md-breakpoint) {
+      display: none;
+    }
+  }
 
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
     justify-content: center;
+
+    @media (max-width: $grid-md-breakpoint - 1) {
+      display: none;
+      position: absolute;
+      width: 100%;
+      background-color: $color-white;
+      top: 2.5rem;
+      left: 0;
+      box-shadow: 0 2px 0 rgba(200, 200, 200, 0.25);
+
+      li {
+        text-align: center;
+      }
+    }
 
     li {
       padding-left: 1.25rem;
@@ -27,6 +54,11 @@ nav {
           transition: all 0.25s ease-in-out;
           position: absolute;
           bottom: -5px;
+
+          @media (max-width: $grid-md-breakpoint - 1) {
+            left: 50%;
+            transform: translateX(-50%);
+          }
         }
 
         &:hover,

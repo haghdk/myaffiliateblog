@@ -15,11 +15,19 @@ export const actions = {
       false,
       /\.json$/
     )
+
     let blogPosts = files.keys().map(key => {
       let res = files(key)
       res.slug = key.slice(2, -5)
       return res
     })
-    await commit('setBlogPosts', blogPosts)
+
+    const sortedArray = await blogPosts.sort((a, b) => {
+      return a.date - b.date
+    })
+
+    const reversedArray = await sortedArray.reverse()
+
+    await commit('setBlogPosts', reversedArray)
   }
 }

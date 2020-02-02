@@ -1,17 +1,30 @@
 <template>
-  <section id="confirmation">
-    <div class="container">
-      <h1>Thank you</h1>
+  <div>
+    <header>
+      <h1 class="title">{{ headerTitle }}</h1>
+    </header>
 
-      <p>
-        Your message was recieved! We will get back to you as soon as possible
-      </p>
-    </div>
-  </section>
+    <main>
+      <section id="contact">
+        <div class="container">
+          <div class="card text-center">
+            Your message was recieved! We will get back to you as soon as
+            possible
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      headerTitle: 'Thank you'
+    }
+  }
+}
 </script>
 
 <style></style>

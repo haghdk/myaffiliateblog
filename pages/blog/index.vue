@@ -1,38 +1,49 @@
 <template>
-  <section id="blogPosts">
-    <div class="container">
-      <h1>Blog</h1>
+  <div>
+    <header>
+      <h1 class="title">{{ headerTitle }}</h1>
+    </header>
 
-      <div class="blog-post-wrapper flex">
-        <article
-          v-for="(blogPost, index) in blogPosts"
-          :key="index"
-          class="blog-post-card"
-        >
-          <img
-            src="/img/350x150.png"
-            v-if="blogPost.mainimage"
-            class="blog-post-card--image"
-          />
-          <div class="blog-post-card--inner">
-            <nuxt-link :to="`blog/${blogPost.slug}`">{{
-              blogPost.title
-            }}</nuxt-link>
-            <span class="blog-post-card--teaser">{{
-              blogPost.description
-            }}</span>
+    <main>
+      <section id="blogPosts">
+        <div class="container">
+          <div class="blog-post-wrapper flex">
+            <article
+              v-for="(blogPost, index) in blogPosts"
+              :key="index"
+              class="blog-post-card"
+            >
+              <img
+                src="/img/350x150.png"
+                v-if="blogPost.mainimage"
+                class="blog-post-card--image"
+              />
+              <div class="blog-post-card--inner">
+                <nuxt-link :to="`blog/${blogPost.slug}`">{{
+                  blogPost.title
+                }}</nuxt-link>
+                <span class="blog-post-card--teaser">{{
+                  blogPost.description
+                }}</span>
 
-            <nuxt-link :to="`blog/${blogPost.slug}`" class="text-bold">
-              Read more
-            </nuxt-link>
+                <nuxt-link :to="`blog/${blogPost.slug}`" class="text-bold">
+                  Read more
+                </nuxt-link>
+              </div>
+            </article>
           </div>
-        </article>
-      </div>
-    </div>
-  </section>
+        </div>
+      </section>
+    </main>
+  </div>
 </template>
 <script>
 export default {
+  data() {
+    return {
+      headerTitle: 'Blog'
+    }
+  },
   head() {
     return {
       title: 'Blog',

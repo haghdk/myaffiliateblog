@@ -1,14 +1,8 @@
 <template>
   <div>
-    <header>
-      <MainNav />
-    </header>
+    <MainNav />
 
-    <main>
-      <div class="container">
-        <nuxt />
-      </div>
-    </main>
+    <nuxt />
 
     <footer>
       <div class="container"></div>

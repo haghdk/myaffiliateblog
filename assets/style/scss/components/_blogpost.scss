@@ -3,8 +3,20 @@
 }
 
 .blog-post-card {
-  background-color: $color-grey-lighter;
-  box-shadow: 2px 2px 0 rgba(200, 200, 200, 0.25);
+  background-color: $color-white;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  text-align: center;
+
+  .read-more {
+    text-transform: uppercase;
+    margin-top: 1.25rem;
+    display: block;
+
+    &::after {
+      content: '\25BA';
+    }
+  }
 
   @media (max-width: $grid-sm-breakpoint - 1) {
     margin-bottom: 1.25rem;
